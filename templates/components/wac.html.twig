@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="logo-container">
+        <img src="{{ asset('build/images/logos/logo.svg') }}" alt="">
+    </div>
+    <div class="countdown-container" id="countdown-container">
+    </div>
+
+    <div class="testi">
+        <div title="WE" class="testo-container1 text">
+            WE
+        </div>
+        <div title="ARE" class="testo-container2 text">
+            ARE
+        </div>
+        <div title="COMING" class="testo-container3 text">
+            COMING
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function countdown() {
+        var now = new Date().getTime();
+
+        var distance = countdownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown-container").innerHTML = days + " G : " + hours + " H : " + minutes + " M : " + seconds + " S";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown-container").innerHTML = "TERMINATO";
+        }
+    }
+
+    var countdownDate = new Date("Nov 20, 2022 00:00:00").getTime();
+
+    countdown();
+    var x = setInterval(countdown, 1000);
+</script>
