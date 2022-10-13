@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@media screen and (max-width: 1199px){
+    body{
+        font-size: 5vw;
+    }
+
+    .container{
+        .logo-container{
+            img{
+                width: 100%;
+            }
+        }
+        .countdown-container{
+            margin-top: 2vw;
+            margin-bottom: 20vw;
+        }
+        .testi{
+            font-size: 10vw;
+            .text{
+                letter-spacing: 24px;
+                margin-bottom: 4vw;
+                margin-left: 12px;
+            }
+            .testo-container1{
+                position: relative;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+
+            .testo-container2{
+                position: relative;
+                top: 15%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+
+            .testo-container3{
+                position: relative;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .container{
+        .logo-container{
+            img{
+                width: 30vw;
+                max-width: 700px;
+            }
+        }
+
+        .countdown-container{
+            font-size: 2vw;
+            margin-top: -1vw;
+            margin-bottom: 5vw;
+            text-decoration: underline;
+            text-underline-offset: 0.5vw;
+        }
+
+        .testi{
+            .text{
+                margin-bottom: 1vw;
+                font-size: 5em;
+            }
+            .testo-container1{
+                position: relative;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+
+            .testo-container2{
+                position: relative;
+                top: 15%;
+                left: 50%;
+                transform: translate(-50%);
+
+                font-size: 4em;
+            }
+
+
+            .testo-container3{
+                position: relative;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+    }
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Jost';
+    color: #F5F5F5;
+
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.container{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .countdown-container{
+        font-weight: bold;
+    }
+    .testi{
+        text-align: center;
+
+        .text{
+            width: 100%;
+            text-align: center;
+        }
+        .testo-container3{
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.testo-container1::before, .testo-container1::after,
+.testo-container2::before, .testo-container2::after,
+.testo-container3::before, .testo-container3::after{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.text::before{
+    color: #ff00c1;
+    animation: glitch-effect 3s infinite;
+}
+
+.text::after{
+    color: #3498db;
+    animation: glitch-effect 2s infinite;
+}
+
+@keyframes glitch-effect {
+    0%{
+        left: -2px;
+        top: -2px;
+    }
+    25%{
+        left: 2px;
+        top: 0px;
+    }
+    50%{
+        left: -1px;
+        top: 2px;
+    }
+    75%{
+        left: 1px;
+        top: -1px;
+    }
+    100%{
+        left: 0px;
+        top: -2px;
+    }
+}

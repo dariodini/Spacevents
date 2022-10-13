@@ -1,0 +1,132 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    height: 100%;
+  }
+  .testo-container {
+    font-size: 3.47vw;
+    line-height: 5vw;
+  }
+  .logo-container img {
+    width: 40vw;
+  }
+  .countdown-container {
+    font-size: 2.43vw;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .testo-container {
+    font-size: 10vw;
+    line-height: 15vw;
+  }
+  .logo-container img {
+    width: 90vw;
+  }
+  .countdown-container {
+    margin-bottom: 40vw;
+    font-size: 4vw;
+  }
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../../fonts/Jost/Jost-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Jost";
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .logo-container {
+  text-align: center;
+}
+.container .countdown-container {
+  text-align: center;
+}
+.container .testi {
+  width: auto;
+  text-align: center;
+  font-size: 5vw;
+}
+.container .testi .testo-container1 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .testi .testo-container2 {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .testi .testo-container3 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .testi .testo-container1::before, .container .testi .testo-container1::after,
+.container .testi .testo-container2::before, .container .testi .testo-container2::after,
+.container .testi .testo-container3::before, .container .testi .testo-container3::after {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.container .testi .text::before {
+  color: #ff00c1;
+  animation: glitch-effect 3s infinite;
+}
+.container .testi .text::after {
+  color: #3498db;
+  animation: glitch-effect 2s infinite;
+}
+
+@keyframes glitch-effect {
+  0% {
+    left: -2px;
+    top: -2px;
+  }
+  25% {
+    left: 2px;
+    top: 0px;
+  }
+  50% {
+    left: -1px;
+    top: 2px;
+  }
+  75% {
+    left: 1px;
+    top: -1px;
+  }
+  100% {
+    left: 0px;
+    top: -2px;
+  }
+}
+
+/*# sourceMappingURL=we_are_coming.css.map */
